@@ -16,7 +16,7 @@ Run this Command to clone project
 ## 1.0.2. Installation
 1). Go to Project Folder Eg : `rmis-frontend`
 
-2). Run command `php artisan composer:install`
+2). Run command `composer:install`
 
 3). Run command ``php artisan rmis:install``
 
