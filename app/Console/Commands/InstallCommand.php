@@ -83,7 +83,7 @@ class InstallCommand extends Command
 
     }
 
-    public function setAPIDomain()
+    public function setAPIDomain(): bool
     {
 
         if ($this->confirm('Do you like to Change Default Backend API Base Url ? ', false)) {
