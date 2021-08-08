@@ -21,7 +21,7 @@
                 </div>
 
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-                <a href="{{route('auth.register')}}">Create New Account</a>
+                <a href="{{route('auth.register')}}" class="btn mt-2">Create New Account</a>
 
             </form>
 
