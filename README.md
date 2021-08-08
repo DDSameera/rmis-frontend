@@ -10,15 +10,16 @@ RMIS stands for Recruitment Management Information System. It can see a Retentio
 ## 1.0.1. Basic Setup
 
 Run this Command to clone project
-   `git clone https://github.com/DDSameera/rmis-frontend.git`
-
+`git clone https://github.com/DDSameera/rmis-frontend.git`
 
 ## 1.0.2. Installation
+
 1). Go to Project Folder Eg : `rmis-frontend`
 
-2). Run command `composer:install`
+2). Run Following Commands on console.
 
-3). Run command ``php artisan rmis:install``
+      1. Installing Depencies - Run  "composer:install"  command
+      2. php artisan rmis:install
 
 
 <img alt="Command_Practice" src="https://raw.githubusercontent.com/DDSameera/rmis-frontend/master/public/assets/img/rmis_setup..gif"/>
