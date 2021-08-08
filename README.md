@@ -17,7 +17,7 @@ RMIS stands for Recruitment Management Information System. It can see a Retentio
 
 Open Terminal & Run command ``php artisan rmis:install``
 
-<img src=""
+<img alt="Command_Practice" src="https://raw.githubusercontent.com/DDSameera/rmis-frontend/master/public/assets/img/rmis_setup..gif"/>
 
 ## 1.0.3. Server URL
 
