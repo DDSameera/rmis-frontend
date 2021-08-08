@@ -53,8 +53,8 @@ class InstallCommand extends Command
         $this->cloneEnvFile();
 
 
-        //3.SETUP APP BASE URL
-        $this->info('******** SETUP APP BASE URL  [3/8] *******');
+        //3.SETUP API BASE URL
+        $this->info('******** SETUP BACKEND API DOMAIN  [3/8] *******');
 
         if ($this->confirm('Do you like to Change Default Backend API Base Url ? ', false)) {
             $apiDomain = $this->ask('Enter Backend API Base Url ');
@@ -101,7 +101,7 @@ class InstallCommand extends Command
         $serverIp = config('app.url');
         $serverPort = config('app.port');
 
-        $output->writeln("RMIS Backend API server started: Please COPY this Address & Paste it on Postman or Insomnia <$serverIp:$serverPort>");
+        $output->writeln("RMIS Frontend APP Server Started. Please COPY this IP & Paste it on Web Browser (Recommended : Chrome) <$serverIp:$serverPort>");
 
         Artisan::call('serve', ['--port' => $serverPort]);
         Artisan::output();
