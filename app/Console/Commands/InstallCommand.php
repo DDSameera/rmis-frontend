@@ -55,11 +55,7 @@ class InstallCommand extends Command
 
         //3.SETUP API BASE URL
         $this->info('******** SETUP BACKEND API DOMAIN  [3/8] *******');
-
-        if ($this->confirm('Do you like to Change Default Backend API Base Url ? ', false)) {
-            $apiDomain = $this->ask('Enter Backend API Base Url ');
-            $this->modifyEnvFile('API_DOMAIN=' . env('API_DOMAIN'), 'API_DOMAIN=' . $apiDomain);
-        }
+        $this->setAPIDomain();
 
 
         //4. Setup Environment
@@ -85,6 +81,20 @@ class InstallCommand extends Command
         $this->info('******** All Process Completed [8/8] .Server is running *******');
         $this->runServer();
 
+    }
+
+    public function setAPIDomain()
+    {
+
+        if ($this->confirm('Do you like to Change Default Backend API Base Url ? ', false)) {
+            $apiDomain = $this->ask('Enter Backend API Base Url ');
+            $this->modifyEnvFile('API_DOMAIN=' . env('API_DOMAIN'), 'API_DOMAIN=' . $apiDomain);
+        } else {
+            $apiDomain = 'http://127.0.0.1:8000';
+            $this->modifyEnvFile('API_DOMAIN=' . env('API_DOMAIN'), 'API_DOMAIN=' . $apiDomain);
+        }
+
+        return true;
     }
 
     public function runComposerCommands(): bool
