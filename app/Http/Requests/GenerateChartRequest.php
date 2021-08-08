@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\ValidateCSVFile;
 use App\Traits\SendResponseTrait;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
@@ -30,16 +31,13 @@ class GenerateChartRequest extends FormRequest
     public function rules()
     {
         return [
-            'excel_file' => 'required'
+            'excel_file' => ['required', new ValidateCSVFile()]
         ];
     }
 
     protected function failedValidation(Validator $validator) {
         throw new HttpResponseException(response()->redirectTo('dashboard')->with('error',$validator->errors()->all()));
     }
-
-
-
 
 
 }
