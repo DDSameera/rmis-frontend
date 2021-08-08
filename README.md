@@ -18,7 +18,7 @@ Run this Command to clone project
 
 2). Run Following Commands on console.
 
-      1. Installing Depencies - Run  "composer:install"  command
+      1. composer:install
       2. php artisan rmis:install
 
 
