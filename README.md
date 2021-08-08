@@ -23,6 +23,6 @@ Open Terminal & Run command ``php artisan rmis:install``
 
 ### ``http://127.0.0.1:9090``
 
-## 1.0.4. Setup Backend Application
+## 1.0.4. Setup Backend Application (REST API)
 
 ### https://github.com/DDSameera/rmis-backend
