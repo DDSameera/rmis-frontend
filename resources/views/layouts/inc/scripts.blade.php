@@ -2,6 +2,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
+
+<!--Highchart-->
 @if(isset($chartData))
     <script type="text/javascript">
 
@@ -11,12 +13,12 @@
                 pointStart: 0
             },
             title: {
-                text: 'Weekly Retention Curves-Mixpanel Data'
+                text: 'Retention Curve Chart Of Onboarding Process'
             },
 
             xAxis: {
                 title: {
-                    text: 'Onboarding Percentage'
+                    text: 'Percentage of Onboarding Process'
                 },
                 categories: [
                     'Create account - 0%',
@@ -32,7 +34,7 @@
             },
             yAxis: {
                 title: {
-                    text: 'Total Onboarded'
+                    text: 'Onboarding Percentage of Users'
                 },
                 type: 'linear',
                 offset: 0
@@ -60,3 +62,4 @@
 
     </script>
 @endif
+<!--Highchart-->

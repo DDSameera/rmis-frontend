@@ -5,7 +5,7 @@
 </head>
 <body>
 @include('layouts.inc.navbar')
-<div class="container">
+<div class="container-fluid">
     @yield('content')
     <hr>
     @include('layouts.inc.footer')
