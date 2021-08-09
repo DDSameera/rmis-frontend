@@ -5,17 +5,17 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\RegisterRequest;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 
 class AuthController extends Controller
 {
 
-    private static $apiDomain;
+    private static String $apiDomain;
 
     public function __construct()
     {
         self::$apiDomain = config('app.api_domain');
+
     }
 
 
